@@ -16,11 +16,11 @@ def show_state
     
 
     while ((player1.life_points) > 0 ) && ((player2.life_points) > 0) 
+        puts "Passons à la phase d'attaque:"
+        player2.attacks(player1)
         if ((player1.life_points) <= 0)
             break puts "#{player1.name} est mort"
         else 
-        puts "Passons à la phase d'attaque:"
-        player2.attacks(player1)
         player1.counter_attack(player2)
         puts ""
         puts "Voici l'état de nos joueurs :"
